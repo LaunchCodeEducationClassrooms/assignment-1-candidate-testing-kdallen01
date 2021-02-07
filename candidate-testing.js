@@ -22,12 +22,13 @@ function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 //candidateAnswer = input.question(question); //I added line
 for (i = 0; i < questions.Length; i++) {  //I added line
-  candidateAnswer = input.question(questions[i]);  //I added line
-  candidateAnswers.push(candidateAnswer);  //I added line
-}
+console.log(questions[i]);
+candidateAnswer = input.question(questions[i]);  //I added line
+candidateAnswers.push(candidateAnswer);  //I added line
+}  //I added line
 
 console.log(candidateAnswers);  //I added line
-}
+}  //I added line
 
 function gradeQuiz(candidateAnswers) {
 
