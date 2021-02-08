@@ -21,27 +21,39 @@ candidateName = input.question("Please enter your name: "); //I added line
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 //candidateAnswer = input.question(question); //I added line
-for (i = 0; i < questions.Length; i++) {  //I added line
-console.log(questions[i]);
-candidateAnswer = input.question(questions[i]);  //I added line
-candidateAnswers.push(candidateAnswer);  //I added line
-}  //I added line
+for (i = 0; i < questions.length; i++) {  //I added line
+//console.log(questions[i]);
+  candidateAnswer = input.question(`\n${i + 1}. ${questions[i]} `);  //I added line
+  console.log(`Your answer: ${candidateAnswer}`)  //I added line
+  console.log(`Correct answer: ${correctAnswers[i]}`)  //I added line
 
-console.log(candidateAnswers);  //I added line
+  if(candidateAnswer.toLowerCase() === correctAnswers[i].toLowerCase()) {
+    candidateAnswers.push(candidateAnswer);  //I added line
+    } 
+ } //I added line
+//console.log(candidateAnswers);  //I added line
 }  //I added line
 
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
  
- if (candidateAnswer === correctAnswer) {  //I added line
-   console.log("Correct!");  //I added line
- } else {  //I added line
-   console.log("Incorrect.");  //I added line
- } //I added line
+ //if (candidateAnswer === correctAnswer) {  //I added line
+  // console.log("Correct!");  //I added line
+ //} else {  //I added line
+   //console.log("Incorrect.");  //I added line
+ //} //I added line
 
   let grade;
 
+  grade = (candidateAnswers.length/correctAnswers.length * 100)
+  console.log(`\n\n>>> Overall Grade: ${grade}% \(${candidateAnswers.length} of ${correctAnswers.length} responses correct) <<<`)
+  if (grade >= 80) {
+    console.log(">>> Status: PASS <<<")
+  } else {
+    console.log(">>> Status: FAIL <<<")
+  }
+    
 
   return grade;
 }
