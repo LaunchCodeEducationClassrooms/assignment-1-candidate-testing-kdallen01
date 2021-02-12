@@ -42,12 +42,9 @@ function gradeQuiz(candidateAnswers) {
     candidateAnswers.push(candidateAnswer);
   }
 //  console.log(candidateAnswers)
-//console.log([i]);
-//console.log(correctAnswers.length);
-//console.log(grade);
+
   if ([i] == correctAnswers.length - 1) {
-  //  console.log(candidateAnswers);
-  //  console.log(candidateAnswers.length);
+
     grade = (candidateAnswers.length/correctAnswers.length * 100);
     console.log(`\n\n>>> Overall Grade: ${grade}% \(${candidateAnswers.length} of ${correctAnswers.length} responses correct) <<<`);
   if (grade >= 80) {
