@@ -25,7 +25,6 @@ function askQuestion() {
   candidateAnswer = input.question(`\n${i + 1}) ${questions[i]}`);
   
 
-
 }
 
 function gradeQuiz(candidateAnswers) {
@@ -41,7 +40,6 @@ function gradeQuiz(candidateAnswers) {
   if (candidateAnswer.toLowerCase() === correctAnswers[i].toLowerCase()) {
     candidateAnswers.push(candidateAnswer);
   }
-//  console.log(candidateAnswers)
 
   if ([i] == correctAnswers.length - 1) {
 
@@ -54,17 +52,7 @@ function gradeQuiz(candidateAnswers) {
   }
   }
 
-  //for (i = 0; i = question.length; i++) {
-  //  if (candidateAnswers[i].toLowerCase === correctAnswer[i].toLowerCase) {
-  //    grade = 1 + grade
-  //    }
-  //  }
-  //}
-  //if(candidateAnswer === correctAnswer) {
-  //  grade = 1;
-  //  console.log("Your answer is correct.")
-  //}
-  return grade;
+   return grade;
 }
 
 function runProgram() {
