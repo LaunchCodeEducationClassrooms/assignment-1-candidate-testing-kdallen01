@@ -22,7 +22,7 @@ function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
   //candidateAnswer = input.question(question);
   
-  candidateAnswer = input.question(`\n${i + 1}. ${questions[i]}`);
+  candidateAnswer = input.question(`\n${i + 1}) ${questions[i]}`);
   
 
 
@@ -70,7 +70,7 @@ function gradeQuiz(candidateAnswers) {
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
-  console.log(`Welcome, ${candidateName}!`);
+  //console.log(`Welcome, ${candidateName}!`);
   for (i = 0; i < questions.length; i++){
   askQuestion();
   gradeQuiz(this.candidateAnswers);
